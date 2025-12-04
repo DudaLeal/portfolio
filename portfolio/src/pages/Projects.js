@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
 import { BsArrowUpRight } from "react-icons/bs";
 import { projectsData } from "../data/db";
@@ -11,11 +12,21 @@ function Projects() {
         <div className="projects-list">
           {projectsData.map((proj) => (
             <div className="project-row" key={proj.id}>
-              <div className="project-image-container">
+              <Link
+                to={`/projects/${proj.id}`}
+                className="project-image-container"
+              >
                 <img src={proj.image} alt={proj.title} />
-              </div>
+              </Link>
+
               <div className="project-details">
-                <h2>{proj.title}</h2>
+                <Link
+                  to={`/projects/${proj.id}`}
+                  style={{ textDecoration: "none" }}
+                >
+                  <h2>{proj.title}</h2>
+                </Link>
+
                 <p className="project-desc">{proj.desc}</p>
 
                 <div className="project-info-table">
@@ -32,11 +43,18 @@ function Projects() {
                     <span className="value">{proj.stack}</span>
                   </div>
                 </div>
+
                 <div className="project-actions">
-                  <a href={`/projects/${proj.id}`} className="action-link">
-                    VIEW PROJECT <BsArrowUpRight className="icon" />
-                  </a>
-                  <a href={proj.github} className="action-link">
+                  <Link to={`/projects/${proj.id}`} className="action-link">
+                    VIEW DETAILS <BsArrowUpRight className="icon" />
+                  </Link>
+
+                  <a
+                    href={proj.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="action-link"
+                  >
                     SEE ON GITHUB <FaGithub className="icon" />
                   </a>
                 </div>
