@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin, FaWhatsapp, FaHtml5, FaCss3Alt, FaJs, FaReact, Fa
 import { SiMongodb, SiPostgresql, SiGit, SiGooglecloud } from 'react-icons/si';
 import profileImg from './profile.jpeg';
 import partyMatch from './pm.svg';
-import cv from './Eduarda_CV_EN.pdf';
+import cv from './Eduarda_CV.pdf';
 import docPartyMatch from './TCC_Eduarda_Leal.pdf';
 
 export const personalData = {

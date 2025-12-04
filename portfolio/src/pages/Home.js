@@ -38,13 +38,6 @@ function Home() {
               >
                 <FaGithub />
               </a>
-              <a
-                href={personalData.socialLinks.whatsapp}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FaWhatsapp />
-              </a>
             </div>
           </div>
         </div>
