@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import "../styles/home.css";
 import { personalData, techStack, projectsData } from "../data/db";
 
@@ -111,12 +111,13 @@ function Home() {
               </Link>
             ))}
           </div>
-
-          <div className="more-projects-left">
-            <Link to="/projects" className="link-underline">
-              MORE PROJECTS
-            </Link>
-          </div>
+          {projectsData.length > 6 && (
+            <div className="more-projects-left">
+              <Link to="/projects" className="link-underline">
+                MORE PROJECTS
+              </Link>
+            </div>
+          )}
         </div>
       </section>
     </div>

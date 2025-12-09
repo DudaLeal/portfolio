@@ -1,20 +1,9 @@
 .projects-page {
-  height: 100vh;
-  width: 100vw;
   max-width: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
-  overflow-y: auto;
-  scroll-behavior: smooth;
   padding-top: 200px;
-  scrollbar-width: none !important;
-  -ms-overflow-style: none !important;
-}
-
-.projects-page::-webkit-scrollbar {
-  display: none !important;
-  width: 0 !important;
-  background: transparent !important;
+  padding-bottom: 50px;
 }
 
 .projects-list {

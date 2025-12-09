@@ -1,20 +1,8 @@
 .project-details-page {
-  height: 100vh;
-  width: 100vw;
-  overflow-y: auto;
-  scroll-behavior: smooth;
-  padding-top: 120px;
-  padding-bottom: 200px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   background-color: var(--bg-color);
   box-sizing: border-box;
-  scrollbar-width: none !important;
-  -ms-overflow-style: none !important;
-}
-
-.project-details-page::-webkit-scrollbar {
-  display: none !important;
-  width: 0 !important;
-  background: transparent !important;
 }
 
 .details-header {
@@ -37,7 +25,10 @@
   font-weight: bold;
 }
 
-.dot { margin: 0 10px; color: #555; }
+.dot {
+  margin: 0 10px;
+  color: #555;
+}
 
 .details-image-container {
   width: 100%;
@@ -82,7 +73,8 @@
   margin-top: 30px;
 }
 
-.btn-primary, .btn-secondary {
+.btn-primary,
+.btn-secondary {
   padding: 0 30px;
   border-radius: 50px;
   text-decoration: none;
@@ -136,7 +128,7 @@
   left: 0;
   background-color: #1c1c1c;
   min-width: 160px;
-  box-shadow: 0px -8px 16px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px -8px 16px 0px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   border: 1px solid #333;
   z-index: 100;
@@ -166,8 +158,15 @@
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .details-right {

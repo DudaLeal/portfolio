@@ -1,30 +1,65 @@
-// src/App.js
-import React from "react";
-import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import React, { useEffect } from "react";
+import {
+  HashRouter as Router,
+  Routes,
+  Route,
+  NavLink,
+  useLocation,
+} from "react-router-dom";
 import "./styles/global.css";
-
+import { personalData } from "./data/db";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import ProjectDetails from "./pages/ProjectDetails";
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   return (
     <Router>
+      <ScrollToTop />
+
       <div className="App">
         <nav className="container navbar">
-          <Link to="/" className="logo">
+          <NavLink to="/" className="logo">
             Eduarda Carvalho
-          </Link>
+          </NavLink>
+
           <ul className="nav-links">
             <li>
-              <Link to="/">Home</Link>
+              <NavLink
+                to="/"
+                end
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                Home
+              </NavLink>
             </li>
             <li>
-              <Link to="/about">About me</Link>
+              <NavLink
+                to="/about"
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                About me
+              </NavLink>
             </li>
             <li>
-              <Link to="/projects">Projects</Link>
+              <NavLink
+                to="/projects"
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                Projects
+              </NavLink>
             </li>
           </ul>
         </nav>
@@ -36,6 +71,30 @@ function App() {
           <Route path="/projects/:id" element={<ProjectDetails />} />
         </Routes>
       </div>
+
+      <footer className="main-footer">
+        <div className="container footer-content">
+          <p>
+            Designed & Built by <strong>{personalData.name}</strong>
+          </p>
+          <div className="footer-socials">
+            <a
+              href={personalData.socialLinks.linkedin}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href={personalData.socialLinks.github}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaGithub />
+            </a>
+          </div>
+        </div>
+      </footer>
     </Router>
   );
 }
