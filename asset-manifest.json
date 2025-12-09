@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.749dab3a.css",
-    "main.js": "/portfolio/static/js/main.fc0cc0c2.js",
+    "main.css": "/portfolio/static/css/main.93572cbc.css",
+    "main.js": "/portfolio/static/js/main.244d6c98.js",
     "static/js/453.6264690d.chunk.js": "/portfolio/static/js/453.6264690d.chunk.js",
-    "static/media/TCC_Eduarda_Leal.pdf": "/portfolio/static/media/TCC_Eduarda_Leal.d6b55366e06c69d24fb5.pdf",
+    "static/media/TCC_Eduarda_Carvalho.pdf": "/portfolio/static/media/TCC_Eduarda_Carvalho.f359a6869e519a1ab124.pdf",
     "static/media/pm.svg": "/portfolio/static/media/pm.38615b69e32ec1b47506319bc903698f.svg",
     "static/media/profile.jpeg": "/portfolio/static/media/profile.fa15d76c31f72d307c2e.jpeg",
-    "static/media/Eduarda_CV.pdf": "/portfolio/static/media/Eduarda_CV.a846ac2f7af863e10f9c.pdf",
+    "static/media/Eduarda_CV.pdf": "/portfolio/static/media/Eduarda_CV.402e6d35e5d13582e5e5.pdf",
     "index.html": "/portfolio/index.html",
-    "main.749dab3a.css.map": "/portfolio/static/css/main.749dab3a.css.map",
-    "main.fc0cc0c2.js.map": "/portfolio/static/js/main.fc0cc0c2.js.map",
+    "main.93572cbc.css.map": "/portfolio/static/css/main.93572cbc.css.map",
+    "main.244d6c98.js.map": "/portfolio/static/js/main.244d6c98.js.map",
     "453.6264690d.chunk.js.map": "/portfolio/static/js/453.6264690d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.749dab3a.css",
-    "static/js/main.fc0cc0c2.js"
+    "static/css/main.93572cbc.css",
+    "static/js/main.244d6c98.js"
   ]
 }
