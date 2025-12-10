@@ -72,6 +72,7 @@ function About() {
                 <h3>{exp.title}</h3>
                 <span className="exp-date">{exp.date}</span>
               </div>
+              <h4 className="exp-company">{exp.company}</h4>
               <p className="exp-text">{exp.desc}</p>
             </div>
           ))}
@@ -88,13 +89,8 @@ function About() {
                 <h3>{edu.title}</h3>
                 <span className="exp-date">{edu.date}</span>
               </div>
-              <p className="exp-text">{edu.institution}</p>
-              <p
-                className="exp-text"
-                style={{ fontSize: "0.9rem", color: "#666" }}
-              >
-                {edu.desc}
-              </p>
+              <h4 className="exp-company">{edu.institution}</h4>
+              {edu.desc && <p className="exp-text">{edu.desc}</p>}
             </div>
           ))}
         </div>

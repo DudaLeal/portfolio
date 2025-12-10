@@ -170,19 +170,7 @@ export const experienceData = [
     date: "Feb 2022 — Oct 2025",
     title: "Software Engineer",
     company: "Accenture Brasil",
-    desc: "Full-stack development using React.js for front-end and Node.js/MongoDB for back-end. Assisted in serverless solutions with AWS Lambda. Development of a high-traffic WhatsApp chatbot using Node.js and IBM Watson. Managed application lifecycle on AWS Cloud (Bedrock, Elastic Beanstalk, DocumentDB).",
-  },
-  {
-    date: "Oct 2020 — Sep 2021",
-    title: "Technical Support Intern",
-    company: "Tasken",
-    desc: "Customer support, ticket analysis, and initial troubleshooting of system-related issues.",
-  },
-  {
-    date: "Sep 2019 — Sep 2020",
-    title: "Educational Technology",
-    company: "Colégio Liessin",
-    desc: "Assisted in programming workshops and MakerSpace projects (3D printing, laser cutting).",
+    desc: "During my tenure as a Software Engineer at Accenture, I specialized in building high-performance, scalable web solutions, with a strong core focus on backend development using Node.js and AWS Cloud architecture. My work encompassed the full software lifecycle, from designing serverless microservices using AWS Lambda and API Gateway to developing responsive front-end interfaces with React.js. I played a key role in engineering a high-traffic conversational AI (WhatsApp chatbot), integrating IBM Watson with a robust Node.js and MongoDB infrastructure to ensure high availability and seamless user flow. Beyond technical delivery, I was committed to team growth, actively mentoring junior developers and driving technical alignment within Agile/Scrum environments to maintain high code quality standards.",
   },
 ];
 
@@ -191,10 +179,123 @@ export const educationData = [
     date: "Aug 2022 — July 2025",
     title: "Bachelor's, Computer Science",
     institution: "Federal University of Rio de Janeiro (UFRJ)",
+    desc: (
+      <>
+        <p>
+          Bachelor of Science in Computer Science at Federal University of Rio
+          de Janeiro (UFRJ). The program provided a comprehensive foundation in
+          software engineering, covering advanced technical subjects such as{" "}
+          <strong>Machine Learning</strong>,{" "}
+          <strong>Information Security</strong>, and{" "}
+          <strong>Concurrent Programming</strong>, alongside essential core
+          concepts like
+          <strong> Data Structures</strong> and{" "}
+          <strong>Algorithm Complexity</strong>.
+        </p>
+
+        <br />
+
+        <h3>Academic Extension & Research</h3>
+        <p>
+          Beyond the classroom, I actively contributed to university extension
+          projects, bridging the gap between technology and the community:
+        </p>
+        <ul
+          style={{
+            listStyleType: "disc",
+            marginLeft: "20px",
+            marginBottom: "10px",
+          }}
+        >
+          <li>
+            <strong>Caronaê (Smart Mobility):</strong> Acted as a developer for
+            the institutional ride-sharing app designed for UFRJ students and
+            staff, contributing to a sustainable mobility solution within the
+            campus.
+          </li>
+          <li>
+            <strong>Museu da Computação:</strong> Authored technical articles
+            and historical documentation (e.g., history of processors and
+            computing hardware) for the museum's digital portal, translating
+            complex history into accessible content.
+          </li>
+          <li>
+            <strong>Lab Escola 3D:</strong> Served as the Web Designer utilizing
+            WordPress and Elementor to develop the project's website, dedicated
+            to showcasing the lab's initiatives, updates, and activities.
+          </li>
+        </ul>
+
+        <br />
+
+        <h3>Capstone Project: Party Match</h3>
+        <p>
+          For my Bachelor's Thesis, I developed <strong>Party Match</strong>, a
+          mobile marketplace for event organization. The project involved
+          full-cycle development using React Native and Spring Boot, validating
+          skills in Product Management and Software Architecture.
+        </p>
+      </>
+    ),
   },
   {
     date: "Mar 2018 — Oct 2019",
     title: "Technical, Software Development",
     institution: "Fundação Bradesco",
+    desc: (
+      <>
+        <p>
+          A hands-on technical program focused on the fundamentals of Software
+          Development, providing a solid base in logic,{" "}
+          <strong>Object-Oriented Programming (OOP)</strong>, and desktop
+          application development.
+        </p>
+
+        <br />
+
+        <h3>Core Competencies</h3>
+        <ul
+          style={{
+            listStyleType: "disc",
+            marginLeft: "20px",
+            marginBottom: "10px",
+          }}
+        >
+          <li>
+            <strong>Languages:</strong> C# and Java.
+          </li>
+          <li>
+            <strong>Database:</strong> Relational Database design and management
+            using <strong>SQL Server</strong>.
+          </li>
+        </ul>
+
+        <br />
+
+        <h3>Key Projects: Retail Inventory System</h3>
+        <p>
+          As a practical assessment at the end of each programming module, I
+          developed a<strong> Desktop Inventory Control System</strong> connected
+          to a SQL Server database. The same project scope was executed twice to
+          consolidate concepts in different environments:
+        </p>
+        <ul
+          style={{
+            listStyleType: "disc",
+            marginLeft: "20px",
+            marginBottom: "10px",
+          }}
+        >
+          <li>
+            <strong>C# Module:</strong> Developed a desktop application
+            integrating the interface directly with the SQL Server database.
+          </li>
+          <li>
+            <strong>Java Module:</strong> Re-implemented the system using Java,
+            focusing on database connectivity (JDBC) and OOP principles.
+          </li>
+        </ul>
+      </>
+    ),
   },
 ];
