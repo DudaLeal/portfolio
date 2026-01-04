@@ -32,7 +32,7 @@ function App() {
       <div className="App">
         <nav className="container navbar">
           <NavLink to="/" className="logo">
-            Eduarda Carvalho
+            {personalData.name}
           </NavLink>
 
           <ul className="nav-links">

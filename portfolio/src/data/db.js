@@ -10,18 +10,18 @@ import {
 } from "react-icons/fa";
 import { SiMongodb, SiPostgresql, SiGit, SiGooglecloud } from "react-icons/si";
 import profileImg from "./profile.jpeg";
-import partyMatch from "./pm.svg";
-import cv from "./Eduarda_CV.pdf";
+import partyMatch from "./party-match.png";
+import cv from "./Eduarda_Cardoso_EN_CV.pdf";
 import docPartyMatch from "./TCC_Eduarda_Carvalho.pdf";
 
 export const personalData = {
-  name: "Eduarda Carvalho",
+  name: "Eduarda Cardoso",
   role: "Software Engineer",
   introduction:
     "I am a Software Engineer with over 3 years of professional experience, specializing in back-end development.",
   cvLink: cv,
   socialLinks: {
-    linkedin: "https://linkedin.com/in/eduarda-leal-carvalho",
+    linkedin: "https://linkedin.com/in/eduarda-lcardoso",
     github: "https://github.com/DudaLeal",
   },
   heroImage: profileImg,
