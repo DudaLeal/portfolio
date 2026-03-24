@@ -13,6 +13,7 @@ import profileImg from "./profile.jpeg";
 import partyMatch from "./party-match.png";
 import cv from "./Eduarda_Cardoso_EN_CV.pdf";
 import docPartyMatch from "./TCC_Eduarda_Carvalho.pdf";
+import workoutAppImg from "./workout.png"
 
 export const personalData = {
   name: "Eduarda Cardoso",
@@ -163,6 +164,112 @@ export const projectsData = [
       "https://www.figma.com/design/nD9YGmYico7UoF4mAd0SU9/Party-Match?node-id=0-1&t=F6T7kBWastYNjFH1-1",
     documentation: docPartyMatch,
   },
+  {
+    id: 2,
+    title: "Workout App",
+    desc: "Mobile application for managing bodybuilding routines, featuring automated workout rotation, progress tracking, and local data persistence.",
+    stack: "React Native, Expo, SQLite",
+    year: 2026,
+    role: "Mobile Developer",
+    image: workoutAppImg,
+    github: "https://github.com/DudaLeal/WorkoutApp/",
+    longDesc: (
+      <>
+        <p>
+          Workout App is a mobile application designed to manage bodybuilding
+          routines and track user progress. The project was built with a strong
+          focus on offline-first capabilities and an intuitive interface to help
+          users know exactly what to train each day.
+        </p>
+
+        <br />
+
+        <h3>The Challenge</h3>
+        <p>
+          Gym-goers frequently struggle to keep track of their training divisions,
+          remember the weights used in previous sessions, and time their rests
+          efficiently. Relying on physical notes or generic note apps often
+          disrupts the workout flow.
+        </p>
+
+        <br />
+
+        <h3>The Solution</h3>
+        <p>A comprehensive and automated workout tracker offering:</p>
+        <ul
+          style={{
+            listStyleType: "disc",
+            marginLeft: "20px",
+            marginBottom: "10px",
+          }}
+        >
+          <li>
+            <strong>Rich Exercise Library:</strong> Access to thousands of exercises
+            with visual demonstrations (GIFs/Images), targeted muscles, equipment,
+            and step-by-step instructions.
+          </li>
+          <li>
+            <strong>Automated Rotation:</strong> Intelligent logic that calculates
+            the next workout of the day based on the user's historical sessions
+            and current training plan.
+          </li>
+          <li>
+            <strong>Progress Tracking:</strong> Detailed weight history for each
+            exercise and built-in timers for execution and rest periods.
+          </li>
+          <li>
+            <strong>Plan Management:</strong> Full CRUD capabilities for creating
+            training macrocycles and their specific subdivisions (e.g., Workout A, B, C).
+          </li>
+        </ul>
+
+        <br />
+
+        <h3>Engineering & Architecture</h3>
+        <p>
+          The system was built as a modern, offline-first mobile application:
+        </p>
+        <ul
+          style={{
+            listStyleType: "disc",
+            marginLeft: "20px",
+            marginBottom: "10px",
+          }}
+        >
+          <li>
+            <strong>Mobile Framework:</strong> Developed using React Native and the
+            Expo ecosystem, utilizing Expo Router for modern file-based navigation.
+          </li>
+          <li>
+            <strong>Offline-First Data:</strong> Powered by a local SQLite database.
+            The app performs a massive initial data seed from a local JSON file,
+            ensuring all subsequent reads and writes happen directly on the device
+            with near-zero latency.
+          </li>
+          <li>
+            <strong>Dynamic Internationalization:</strong> Implemented <code>react-i18next</code>
+            in a highly optimized way. Instead of translating on the frontend, the
+            language preference dictates dynamic SQL queries (e.g., fetching <code>name_en</code>
+            or <code>name_pt</code>), keeping the UI lightweight.
+          </li>
+          <li>
+            <strong>Data Visualization:</strong> Integration of <code>react-native-gifted-charts</code>
+            to render complex historical weight data into user-friendly interactive graphs.
+          </li>
+        </ul>
+
+        <br />
+
+        <h3>Results</h3>
+        <p>
+          The final product is a highly responsive mobile app that perfectly bridges
+          the gap between complex workout planning and simple daily execution. It
+          empowers users to maintain consistency in their macrocycles while keeping
+          their training data secure and instantly accessible offline.
+        </p>
+      </>
+    ),
+  }
 ];
 
 export const experienceData = [
