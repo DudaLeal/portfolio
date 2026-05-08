@@ -13,7 +13,7 @@ import profileImg from "./profile.jpeg";
 import partyMatch from "./party-match.png";
 import cv from "./Eduarda_Cardoso_EN_CV.pdf";
 import docPartyMatch from "./TCC_Eduarda_Carvalho.pdf";
-import workoutAppImg from "./workout.png"
+import workoutAppImg from "./workout.png";
 
 export const personalData = {
   name: "Eduarda Cardoso",
@@ -52,12 +52,15 @@ export const aboutPageData = {
   capabilitiesList: [
     "NODE.JS",
     "REACT.JS",
-    "AWS CLOUD",
-    "MONGODB",
-    "SQL SERVER",
-    "MYSQL",
+    "REACT NATIVE",
     "JAVASCRIPT",
-    "PYTHON",
+    "TYPESCRIPT",
+    "JAVA",
+    "AWS",
+    "GCP",
+    "DOCKER",
+    "MONGODB",
+    "POSTGRESQL",
     "GIT",
     "SCRUM",
     "IBM WATSON",
@@ -186,10 +189,10 @@ export const projectsData = [
 
         <h3>The Challenge</h3>
         <p>
-          Gym-goers frequently struggle to keep track of their training divisions,
-          remember the weights used in previous sessions, and time their rests
-          efficiently. Relying on physical notes or generic note apps often
-          disrupts the workout flow.
+          Gym-goers frequently struggle to keep track of their training
+          divisions, remember the weights used in previous sessions, and time
+          their rests efficiently. Relying on physical notes or generic note
+          apps often disrupts the workout flow.
         </p>
 
         <br />
@@ -204,22 +207,23 @@ export const projectsData = [
           }}
         >
           <li>
-            <strong>Rich Exercise Library:</strong> Access to thousands of exercises
-            with visual demonstrations (GIFs/Images), targeted muscles, equipment,
-            and step-by-step instructions.
+            <strong>Rich Exercise Library:</strong> Access to thousands of
+            exercises with visual demonstrations (GIFs/Images), targeted
+            muscles, equipment, and step-by-step instructions.
           </li>
           <li>
-            <strong>Automated Rotation:</strong> Intelligent logic that calculates
-            the next workout of the day based on the user's historical sessions
-            and current training plan.
+            <strong>Automated Rotation:</strong> Intelligent logic that
+            calculates the next workout of the day based on the user's
+            historical sessions and current training plan.
           </li>
           <li>
             <strong>Progress Tracking:</strong> Detailed weight history for each
             exercise and built-in timers for execution and rest periods.
           </li>
           <li>
-            <strong>Plan Management:</strong> Full CRUD capabilities for creating
-            training macrocycles and their specific subdivisions (e.g., Workout A, B, C).
+            <strong>Plan Management:</strong> Full CRUD capabilities for
+            creating training macrocycles and their specific subdivisions (e.g.,
+            Workout A, B, C).
           </li>
         </ul>
 
@@ -237,24 +241,29 @@ export const projectsData = [
           }}
         >
           <li>
-            <strong>Mobile Framework:</strong> Developed using React Native and the
-            Expo ecosystem, utilizing Expo Router for modern file-based navigation.
+            <strong>Mobile Framework:</strong> Developed using React Native and
+            the Expo ecosystem, utilizing Expo Router for modern file-based
+            navigation.
           </li>
           <li>
-            <strong>Offline-First Data:</strong> Powered by a local SQLite database.
-            The app performs a massive initial data seed from a local JSON file,
-            ensuring all subsequent reads and writes happen directly on the device
-            with near-zero latency.
+            <strong>Offline-First Data:</strong> Powered by a local SQLite
+            database. The app performs a massive initial data seed from a local
+            JSON file, ensuring all subsequent reads and writes happen directly
+            on the device with near-zero latency.
           </li>
           <li>
-            <strong>Dynamic Internationalization:</strong> Implemented <code>react-i18next</code>
-            in a highly optimized way. Instead of translating on the frontend, the
-            language preference dictates dynamic SQL queries (e.g., fetching <code>name_en</code>
+            <strong>Dynamic Internationalization:</strong> Implemented{" "}
+            <code>react-i18next</code>
+            in a highly optimized way. Instead of translating on the frontend,
+            the language preference dictates dynamic SQL queries (e.g., fetching{" "}
+            <code>name_en</code>
             or <code>name_pt</code>), keeping the UI lightweight.
           </li>
           <li>
-            <strong>Data Visualization:</strong> Integration of <code>react-native-gifted-charts</code>
-            to render complex historical weight data into user-friendly interactive graphs.
+            <strong>Data Visualization:</strong> Integration of{" "}
+            <code>react-native-gifted-charts</code>
+            to render complex historical weight data into user-friendly
+            interactive graphs.
           </li>
         </ul>
 
@@ -262,22 +271,90 @@ export const projectsData = [
 
         <h3>Results</h3>
         <p>
-          The final product is a highly responsive mobile app that perfectly bridges
-          the gap between complex workout planning and simple daily execution. It
-          empowers users to maintain consistency in their macrocycles while keeping
-          their training data secure and instantly accessible offline.
+          The final product is a highly responsive mobile app that perfectly
+          bridges the gap between complex workout planning and simple daily
+          execution. It empowers users to maintain consistency in their
+          macrocycles while keeping their training data secure and instantly
+          accessible offline.
         </p>
       </>
     ),
-  }
+  },
 ];
 
 export const experienceData = [
   {
-    date: "Feb 2022 — Oct 2025",
+    date: "Feb 2024 — Oct 2025",
     title: "Software Engineer",
-    company: "Accenture Brasil",
-    desc: "During my tenure as a Software Engineer at Accenture, I specialized in building high-performance, scalable web solutions, with a strong core focus on backend development using Node.js and AWS Cloud architecture. My work encompassed the full software lifecycle, from designing serverless microservices using AWS Lambda and API Gateway to developing responsive front-end interfaces with React.js. I played a key role in engineering a high-traffic conversational AI (WhatsApp chatbot), integrating IBM Watson with a robust Node.js and MongoDB infrastructure to ensure high availability and seamless user flow. Beyond technical delivery, I was committed to team growth, actively mentoring junior developers and driving technical alignment within Agile/Scrum environments to maintain high code quality standards.",
+    company: "Accenture Brazil",
+    desc: (
+      <>
+        <ul
+          style={{
+            listStyleType: "disc",
+            marginLeft: "20px",
+            marginBottom: "10px",
+          }}
+        >
+          <li>
+            <strong>Backend & Cloud Architecture:</strong> Engineered and
+            maintained a high-traffic WhatsApp chatbot using Node.js, AWS, and
+            MongoDB, effectively automating critical customer service
+            operations.
+          </li>
+          <li>
+            <strong>Generative AI Integration: </strong> Implemented GenAI
+            capabilities into the conversational flow using AWS Bedrock agents,
+            utilizing AWS Lambda for seamless serverless execution.
+          </li>
+          <li>
+            <strong>Infrastructure Management: </strong> Managed cloud
+            deployments using AWS Elastic Beanstalk and monitored application
+            health, performance, and logs via AWS CloudWatch.
+          </li>
+          <li>
+            <strong>Agile Delivery: </strong> Actively participated in all Scrum
+            ceremonies consistently delivering new features and resolving
+            complex bugs.
+          </li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    date: "Feb 2022 — Jan 2024",
+    title: "Software Engineer Intern",
+    company: "Accenture Brazil",
+    desc: (
+      <>
+        <ul
+          style={{
+            listStyleType: "disc",
+            marginLeft: "20px",
+            marginBottom: "10px",
+          }}
+        >
+          <li>
+            <strong>WhatsApp Bot Backend (May 2023 – Jan 2024): .</strong>{" "}
+            Transitioned to the core backend team, contributing to the
+            development of the Node.js/AWS chatbot, implementing logic features,
+            and managing the MongoDB database in the cloud.
+          </li>
+          <li>
+            <strong>Full-Stack Web Development (Feb 2022 – May 2023): </strong>{" "}
+            Engineered a web platform building responsive interfaces and robust
+            APIs using Node.js and React.js. Managed data with MongoDB and
+            Redis, and utilized Jenkins for continuous integration and
+            deployment pipelines.
+          </li>
+          <li>
+            <strong>Agile Collaboration:</strong> Engaged in daily Scrum
+            meetings and technical alignments, ensuring highquality code
+            delivery within sprint deadlines.
+          </li>
+        </ul>
+      </>
+    ),
   },
 ];
 
@@ -382,9 +459,9 @@ export const educationData = [
         <h3>Key Projects: Retail Inventory System</h3>
         <p>
           As a practical assessment at the end of each programming module, I
-          developed a<strong> Desktop Inventory Control System</strong> connected
-          to a SQL Server database. The same project scope was executed twice to
-          consolidate concepts in different environments:
+          developed a<strong> Desktop Inventory Control System</strong>{" "}
+          connected to a SQL Server database. The same project scope was
+          executed twice to consolidate concepts in different environments:
         </p>
         <ul
           style={{
