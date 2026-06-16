@@ -14,6 +14,9 @@ import partyMatch from "./party-match.png";
 import cv from "./Eduarda_Cardoso_EN_CV.pdf";
 import docPartyMatch from "./TCC_Eduarda_Carvalho.pdf";
 import workoutAppImg from "./workout.png";
+import weddingImg from "./weddingImg.jpg";
+import weddingVideo from "./weddingVideo.mp4";
+import chatbotImg from "./chatbot.jpg";
 
 export const personalData = {
   name: "Eduarda Cardoso",
@@ -276,6 +279,212 @@ export const projectsData = [
           execution. It empowers users to maintain consistency in their
           macrocycles while keeping their training data secure and instantly
           accessible offline.
+        </p>
+      </>
+    ),
+  },
+  {
+    id: 3,
+    title: "Wedding System",
+    desc: "Serverless full-stack application for managing weddings, featuring a unified RSVP and gift registry with zero operational costs.",
+    stack: "Next.js, React, MongoDB Atlas",
+    year: 2026,
+    role: "Full-Stack Developer",
+    image: weddingImg,
+    video: weddingVideo,
+    github: "https://github.com/DudaLeal/wedding-system",
+    wip: true,
+    longDesc: (
+      <>
+        <p>
+          The Wedding System is a serverless full-stack application focused on
+          end-to-end wedding management. Architected under a strict Zero Cost
+          infrastructure constraint, it unifies RSVP and gift registries without
+          the high fees and maintenance costs of traditional market platforms.
+        </p>
+
+        <br />
+
+        <h3>The Challenge</h3>
+        <p>
+          Couples face tool fragmentation when organizing an event (separate
+          platforms for guest lists and gifts) and high fees from standard
+          payment gateways. Technologically, the challenge lies in handling gift
+          reservation concurrency and complex guest hierarchies without
+          resorting to paid infrastructure, background workers, or CRON jobs.
+        </p>
+
+        <br />
+
+        <h3>The Solution</h3>
+        <p>A unified, zero-operational-cost platform delivering:</p>
+        <ul
+          style={{
+            listStyleType: "disc",
+            marginLeft: "20px",
+            marginBottom: "10px",
+          }}
+        >
+          <li>
+            <strong>For guests:</strong> A seamless experience featuring a State
+            Machine-restricted RSVP (immutable on the client after submission),
+            support for companions linked to the main invitation, and a gift
+            registry with frictionless checkout (PIX/Credit Card).
+          </li>
+          <li>
+            <strong>For the couple:</strong> A segregated and secure Admin
+            dashboard for guest management, real-time gift tracking, and
+            best-effort financial reconciliation via webhooks.
+          </li>
+        </ul>
+
+        <br />
+
+        <h3>Engineering & Architecture</h3>
+        <p>
+          The system was built as a modern, offline-first mobile application:
+        </p>
+        <ul
+          style={{
+            listStyleType: "disc",
+            marginLeft: "20px",
+            marginBottom: "10px",
+          }}
+        >
+          <li>
+            <strong>Core:</strong> Next.js (App Router) orchestrating the React
+            Front-end and Back-end via Server Actions and API Routes.
+          </li>
+          <li>
+            <strong>Data:</strong> MongoDB Atlas (Mongoose). The database
+            centralizes business rules, such as the gift concurrency lock system
+            resolved on-the-fly via timestamp queries, eliminating costs
+            associated with background routines.
+          </li>
+          <li>
+            <strong>Integrations</strong> InfinitePay for payment processing and
+            webhook handling.
+          </li>
+          <li>
+            <strong>Infrastructure:</strong> Automated deployment and serverless
+            hosting on Vercel.
+          </li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    id: 4,
+    title: "WhatsApp Chatbot",
+    desc: "An automated customer support chatbot integrated with WhatsApp, leveraging RAG to deliver precise, hallucination-free answers from a vector database.",
+    stack:
+      "Node.js, TypeScript, Google Gemini API, Supabase, WhatsApp Cloud API",
+    year: 2026,
+    role: "Software Engineer",
+    image: chatbotImg,
+    github: "https://github.com/DudaLeal/chatbot-faq/",
+    wip: true,
+    longDesc: (
+      <>
+        <p>
+          The WhatsApp Chatbot is an automated messaging system
+          designed to optimize customer communication. Operating 24/7, it uses
+          advanced Artificial Intelligence to provide instant, precise answers
+          to frequently asked questions (FAQ).
+        </p>
+
+        <br />
+
+        <h3>The Challenge</h3>
+        <p>
+          Support teams often face a high volume of repetitive inquiries, which
+          can delay response times and increase operational costs. The
+          challenge was to build an automated system that could accurately
+          understand user intent while strictly preventing the AI from
+          hallucinating or providing information outside the company's
+          established knowledge base.
+        </p>
+
+        <br />
+
+        <h3>The Solution</h3>
+        <p>A scalable, serverless chatbot featuring:</p>
+        <ul
+          style={{
+            listStyleType: "disc",
+            marginLeft: "20px",
+            marginBottom: "10px",
+          }}
+        >
+          <li>
+            <strong>RAG (Retrieval-Augmented Generation):</strong> Semantic
+            search capabilities that understand the context of user questions,
+            ignoring slang and grammatical errors, to fetch correct
+            answers.
+          </li>
+          <li>
+            <strong>Strict Hallucination Mitigation:</strong> The LLM is rigidly
+            configured to respond exclusively using the indexed corporate
+            knowledge base.
+          </li>
+          <li>
+            <strong>Human Handoff:</strong> Automated triggers that pause the
+            chatbot and smoothly transfer the conversation to a human operator
+            when the AI confidence is low or the user requests it.
+          </li>
+          <li>
+            <strong>Continuous Learning Panel:</strong> An admin interface for
+            curating failed queries and re-indexing the vector database without
+            requiring code changes.
+          </li>
+        </ul>
+
+        <br />
+
+        <h3>Engineering & Architecture</h3>
+        <p>
+          The system was built with a modern, serverless cloud architecture
+          focusing on low maintenance and high scalability:
+        </p>
+        <ul
+          style={{
+            listStyleType: "disc",
+            marginLeft: "20px",
+            marginBottom: "10px",
+          }}
+        >
+          <li>
+            <strong>Backend & Integrations:</strong> Developed in Node.js using
+            TypeScript to robustly handle asynchronous webhook processing
+            directly from the official WhatsApp Cloud API.
+          </li>
+          <li>
+            <strong>AI Engine:</strong> Powered by the Google Gemini API,
+            utilizing <code>gemini-embedding-001</code> for creating vector
+            representations of knowledge and Gemini for highly cost-effective
+            and intelligent language generation.
+          </li>
+          <li>
+            <strong>Vector Database:</strong> Built on Supabase, leveraging the{" "}
+            <code>pgvector</code> extension to centralize both traditional chat
+            history logs and knowledge embeddings within the same PostgreSQL
+            ecosystem.
+          </li>
+          <li>
+            <strong>Admin Interface:</strong> Designed with Retool to provide a user-friendly curation and log management
+            dashboard.
+          </li>
+        </ul>
+
+        <br />
+
+        <h3>Results</h3>
+        <p>
+          The result is a highly stable and intelligent messaging system that
+          drastically reduces the human support workload. By maintaining an
+          uncompromised standard of data privacy via environment variables and
+          seamlessly integrating the human handoff protocol, the chatbot ensures
+          users always receive accurate, reliable, and fluid customer service.
         </p>
       </>
     ),

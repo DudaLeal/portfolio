@@ -35,10 +35,27 @@ function ProjectDetails() {
         </div>
 
         <div className="details-image-container">
-          <img src={project.image} alt={project.title} />
+          {project.video ? (
+            <video
+              src={project.video}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="project-media"
+            />
+          ) : (
+            <img src={project.image} alt={project.title} className="project-media" />
+          )}
         </div>
         <div className="details-content">
           <div className="details-left">
+            {project.wip && (
+              <div className="wip-banner">
+                <strong>In Development</strong> <br />
+                This project is currently being worked on and some features may be incomplete.
+              </div>
+            )}
             <h3>Overview</h3>
             <p className="details-desc" style={{ whiteSpace: "pre-line" }}>
               {project.longDesc || project.desc}
