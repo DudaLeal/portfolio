@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
 import { BsArrowUpRight } from "react-icons/bs";
-import { projectsData } from "../data/db";
+import { projectsData, getProjectSlug } from "../data/db";
 import "../styles/projects.css";
 
 function Projects() {
@@ -13,7 +13,7 @@ function Projects() {
           {projectsData.map((proj) => (
             <div className="project-row" key={proj.id}>
               <Link
-                to={`/projects/${proj.id}`}
+                to={`/projects/${getProjectSlug(proj.title)}`}
                 className="project-image-container"
               >
                 <img src={proj.image} alt={proj.title} />
@@ -21,7 +21,7 @@ function Projects() {
 
               <div className="project-details">
                 <Link
-                  to={`/projects/${proj.id}`}
+                  to={`/projects/${getProjectSlug(proj.title)}`}
                   style={{ textDecoration: "none" }}
                 >
                   <h2>{proj.title}</h2>
@@ -45,7 +45,7 @@ function Projects() {
                 </div>
 
                 <div className="project-actions">
-                  <Link to={`/projects/${proj.id}`} className="action-link">
+                  <Link to={`/projects/${getProjectSlug(proj.title)}`} className="action-link">
                     VIEW DETAILS <BsArrowUpRight className="icon" />
                   </Link>
 

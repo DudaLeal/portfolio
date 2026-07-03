@@ -378,7 +378,7 @@ export const projectsData = [
     title: "WhatsApp Chatbot",
     desc: "An automated customer support chatbot integrated with WhatsApp, leveraging RAG to deliver precise, hallucination-free answers from a vector database.",
     stack:
-      "Node.js, TypeScript, Google Gemini API, Supabase, WhatsApp Cloud API",
+      "Node.js, TypeScript, React, Google Gemini API, Supabase, WhatsApp Cloud API",
     year: 2026,
     role: "Software Engineer",
     image: chatbotImg,
@@ -387,10 +387,12 @@ export const projectsData = [
     longDesc: (
       <>
         <p>
-          The WhatsApp Chatbot is an automated messaging system
+          The WhatsApp Chatbot is an automated messaging and management system
           designed to optimize customer communication. Operating 24/7, it uses
-          advanced Artificial Intelligence to provide instant, precise answers
-          to frequently asked questions (FAQ).
+          Retrieval-Augmented Generation (RAG) and a bespoke administrative
+          dashboard to provide instant, precise answers to frequently asked
+          questions (FAQ), while allowing human agents to monitor and take
+          control of chats in real-time.
         </p>
 
         <br />
@@ -398,17 +400,17 @@ export const projectsData = [
         <h3>The Challenge</h3>
         <p>
           Support teams often face a high volume of repetitive inquiries, which
-          can delay response times and increase operational costs. The
-          challenge was to build an automated system that could accurately
-          understand user intent while strictly preventing the AI from
-          hallucinating or providing information outside the company's
-          established knowledge base.
+          delays response times and increases operational costs. The challenge
+          was to build a system that accurately understands user intent,
+          strictly prevents AI hallucinations, and provides a secure, intuitive
+          dashboard for human agents to supervise conversations, update company
+          knowledge, and seamlessly take over chats when necessary.
         </p>
 
         <br />
 
         <h3>The Solution</h3>
-        <p>A scalable, serverless chatbot featuring:</p>
+        <p>A scalable, secure conversational ecosystem featuring:</p>
         <ul
           style={{
             listStyleType: "disc",
@@ -417,10 +419,9 @@ export const projectsData = [
           }}
         >
           <li>
-            <strong>RAG (Retrieval-Augmented Generation):</strong> Semantic
+            <strong>Retrieval-Augmented Generation (RAG):</strong> Semantic
             search capabilities that understand the context of user questions,
-            ignoring slang and grammatical errors, to fetch correct
-            answers.
+            ignoring slang and grammatical errors, to fetch correct answers.
           </li>
           <li>
             <strong>Strict Hallucination Mitigation:</strong> The LLM is rigidly
@@ -428,14 +429,22 @@ export const projectsData = [
             knowledge base.
           </li>
           <li>
-            <strong>Human Handoff:</strong> Automated triggers that pause the
-            chatbot and smoothly transfer the conversation to a human operator
-            when the AI confidence is low or the user requests it.
+            <strong>Human Handoff:</strong> A two-step fallback protocol. If the
+            AI cannot answer, it politely asks if the user wants to speak with a
+            human. If the user confirms ("yes", "please", etc.), the chatbot
+            automatically pauses itself, notifies support, and hands over the
+            chat.
           </li>
           <li>
-            <strong>Continuous Learning Panel:</strong> An admin interface for
-            curating failed queries and re-indexing the vector database without
-            requiring code changes.
+            <strong>Custom Administration Panel:</strong> A bespoke, responsive
+            React dashboard featuring a collapsible navigation sidebar,
+            real-time message stream, and dark/light modes.
+          </li>
+          <li>
+            <strong>Continuous Curation Queue:</strong> An interface that
+            captures unresolved user questions, allowing agents to input the
+            correct answer, assign a category and title, and index it into the
+            vector database in one click.
           </li>
         </ul>
 
@@ -443,8 +452,8 @@ export const projectsData = [
 
         <h3>Engineering & Architecture</h3>
         <p>
-          The system was built with a modern, serverless cloud architecture
-          focusing on low maintenance and high scalability:
+          The system was engineered using a decoupled, secure server-client
+          architecture:
         </p>
         <ul
           style={{
@@ -454,25 +463,45 @@ export const projectsData = [
           }}
         >
           <li>
-            <strong>Backend & Integrations:</strong> Developed in Node.js using
-            TypeScript to robustly handle asynchronous webhook processing
-            directly from the official WhatsApp Cloud API.
+            <strong>Backend & Integrations:</strong> Developed in Node.js and
+            TypeScript using Express to handle real-time webhook payloads from
+            the official WhatsApp Cloud API. Secure access to all admin routes
+            is enforced via a custom JWT (JSON Web Token) authentication
+            middleware.
           </li>
           <li>
-            <strong>AI Engine:</strong> Powered by the Google Gemini API,
-            utilizing <code>gemini-embedding-001</code> for creating vector
-            representations of knowledge and Gemini for highly cost-effective
-            and intelligent language generation.
+            <strong>AI Engine:</strong> Powered by the Google Gemini API using{" "}
+            <code>Gemini 3.5 Flash</code>. Uses{" "}
+            <code>gemini-embedding-001</code> for vectorizing enterprise
+            documentation.
           </li>
           <li>
             <strong>Vector Database:</strong> Built on Supabase, leveraging the{" "}
-            <code>pgvector</code> extension to centralize both traditional chat
-            history logs and knowledge embeddings within the same PostgreSQL
-            ecosystem.
+            <code>pgvector</code> extension to query semantic contexts via
+            cosine similarity, and utilizing Supabase Realtime channels to
+            stream inbox updates instantly.
           </li>
           <li>
-            <strong>Admin Interface:</strong> Designed with Retool to provide a user-friendly curation and log management
-            dashboard.
+            <strong>Bespoke Frontend Panel:</strong> Developed in React, Vite,
+            and Vanilla CSS. It features:
+            <ul
+              style={{
+                listStyleType: "disc",
+                marginLeft: "20px",
+                marginBottom: "10px",
+              }}
+            >
+              <li>
+                <strong>Real-Time Messaging:</strong> Displays active chats with
+                unread counters, role differentiation labels, and an override
+                toggle to pause/resume the AI.
+                <strong>Knowledge Grid:</strong> Fully editable table to manage
+                knowledge items, categories, and titles.
+                <strong>Dynamic Settings Control:</strong> A database-backed
+                config page that lets administrators edit the system prompt and
+                change AI models instantly without restarting the server.
+              </li>
+            </ul>
           </li>
         </ul>
 
@@ -480,11 +509,12 @@ export const projectsData = [
 
         <h3>Results</h3>
         <p>
-          The result is a highly stable and intelligent messaging system that
-          drastically reduces the human support workload. By maintaining an
-          uncompromised standard of data privacy via environment variables and
-          seamlessly integrating the human handoff protocol, the chatbot ensures
-          users always receive accurate, reliable, and fluid customer service.
+          The result is a highly stable, secure, and intelligent messaging
+          solution that reduces support workload by automating repetitive FAQs.
+          By combining robust JWT security, real-time agent notifications, and a
+          seamless human takeover channel, the chatbot guarantees that users
+          receive accurate, reliable support while giving the company absolute
+          control over their AI.
         </p>
       </>
     ),
@@ -692,3 +722,10 @@ export const educationData = [
     ),
   },
 ];
+
+export const getProjectSlug = (title) => {
+  return title
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^a-z0-9-]/g, "");
+};

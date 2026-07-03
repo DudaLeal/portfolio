@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import "../styles/home.css";
-import { personalData, techStack, projectsData } from "../data/db";
+import { personalData, techStack, projectsData, getProjectSlug } from "../data/db";
 
 function Home() {
   return (
@@ -90,7 +90,7 @@ function Home() {
           <div className="projects-grid">
             {projectsData.map((proj) => (
               <Link
-                to={`/projects/${proj.id}`}
+                to={`/projects/${getProjectSlug(proj.title)}`}
                 className="project-card-home"
                 key={proj.id}
               >

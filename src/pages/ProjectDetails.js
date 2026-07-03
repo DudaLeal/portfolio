@@ -7,12 +7,12 @@ import {
   FaChevronDown,
 } from "react-icons/fa";
 import { BsArrowUpRight } from "react-icons/bs";
-import { projectsData } from "../data/db";
+import { projectsData, getProjectSlug } from "../data/db";
 import "../styles/project-details.css";
 
 function ProjectDetails() {
-  const { id } = useParams();
-  const project = projectsData.find((p) => p.id === parseInt(id));
+  const { slug } = useParams();
+  const project = projectsData.find((p) => getProjectSlug(p.title) === slug);
 
   useEffect(() => {
     window.scrollTo(0, 0);
