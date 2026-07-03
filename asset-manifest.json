@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.393cec4a.css",
-    "main.js": "/portfolio/static/js/main.718373a0.js",
+    "main.js": "/portfolio/static/js/main.ac696315.js",
     "static/js/453.6264690d.chunk.js": "/portfolio/static/js/453.6264690d.chunk.js",
     "static/media/TCC_Eduarda_Carvalho.pdf": "/portfolio/static/media/TCC_Eduarda_Carvalho.f359a6869e519a1ab124.pdf",
     "static/media/weddingVideo.mp4": "/portfolio/static/media/weddingVideo.40110f890fa1800a0034.mp4",
     "static/media/workout.png": "/portfolio/static/media/workout.13ab51513f417d3ba637.png",
     "static/media/party-match.png": "/portfolio/static/media/party-match.e46ed567546e0b6c2af8.png",
-    "static/media/chatbot.jpg": "/portfolio/static/media/chatbot.b4a858b0802c786661e7.jpg",
+    "static/media/chatbot.jpg": "/portfolio/static/media/chatbot.89bd26e281873b7709b2.jpg",
     "static/media/Eduarda_Cardoso_EN_CV.pdf": "/portfolio/static/media/Eduarda_Cardoso_EN_CV.326c8cb9d6a290b74246.pdf",
     "static/media/weddingImg.jpg": "/portfolio/static/media/weddingImg.34f8fe6eaa925864b2be.jpg",
     "static/media/profile.jpeg": "/portfolio/static/media/profile.fa15d76c31f72d307c2e.jpeg",
     "index.html": "/portfolio/index.html",
     "main.393cec4a.css.map": "/portfolio/static/css/main.393cec4a.css.map",
-    "main.718373a0.js.map": "/portfolio/static/js/main.718373a0.js.map",
+    "main.ac696315.js.map": "/portfolio/static/js/main.ac696315.js.map",
     "453.6264690d.chunk.js.map": "/portfolio/static/js/453.6264690d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.393cec4a.css",
-    "static/js/main.718373a0.js"
+    "static/js/main.ac696315.js"
   ]
 }
